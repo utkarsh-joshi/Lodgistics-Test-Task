@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>employee-details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div class="circular-image-wrapper">
+      <img  src="{{profile_image || '../../../../assets/imgs/favicon.png'}}" class="profile-pic">
+    </div>
+    <div class="camera-icon-wrapper">
+      <ion-icon name="camera" class="camera-icon" (click)="editProfilePic()"></ion-icon>
+    </div>
+    <div class="other-emp-details">
+      <ion-row justify-content-center>
+        <ion-label class="label-employee-name">{{employee_name}}</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-label class="label-employee-age">Age</ion-label>
+        </ion-col>
+        <ion-col>
+          <input type="tel" [(ngModel)]="employee_age">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-label class="label-employee-salary">Salary</ion-label>
+        </ion-col>
+        <ion-col>
+          <input type="tel" [(ngModel)]="employee_salary">
+        </ion-col>
+      </ion-row>
+    </div>
+ 
+    <ion-button expand="block" (click)="updateEmployeeDetails()">Update</ion-button>
+    
+  </ion-card>
+
+</ion-content>

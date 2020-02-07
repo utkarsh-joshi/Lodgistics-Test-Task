@@ -1,0 +1,40 @@
+.card-grid {
+  padding: 0px;
+}
+
+.list-item-card {
+  background: white;
+  border: 5px;
+  padding: 0;
+  margin: 10px;
+}
+
+.img-person {
+  width: 42px;
+  height: 42px;
+}
+
+.label-employee-name{
+  font-size: 1.2rem;
+  color: #282A2B;
+}
+
+.label-employee-age {
+  font-size: .9rem;
+  color: #515557;
+}
+ 
+.col-employee-info {
+  padding: .5rem;
+  text-align: start;
+}
+.employee-list{
+  margin-bottom: 0px;;
+}
+.icon-edit{
+  position: relative;
+  top: 50%;
+  font-size:2.3rem;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

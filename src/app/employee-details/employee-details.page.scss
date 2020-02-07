@@ -1,0 +1,58 @@
+.card-emp-details{
+    background-color: bisque;
+}
+.circular-image-wrapper{
+    width: 120px;
+    height: 120px;
+    border: darkgrey 3px solid;
+    border-radius: 50%;
+    margin: auto;
+}
+.camera-icon-wrapper{
+    border: darkgrey 3px solid;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    top: -32px;
+    left: 32px;
+    background: white;
+}
+.profile-pic{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+ 
+.camera-icon{
+    position: relative;
+    top: 50%;
+    font-size:2.3rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+ 
+.label-employee-name{
+    font-size: 1.7rem;
+    color: #282A2B;
+    font-weight: 700;
+  }
+  .other-emp-details{
+      padding: 10px;
+  }
+
+  .label-employee-age{
+    font-size: 1.2rem;
+    color: #282A2B;
+    font-weight: 700;
+  }
+  .label-employee-salary{
+    font-size: 1.2rem;
+    color: #282A2B;
+    font-weight: 700;
+  }

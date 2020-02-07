@@ -1,0 +1,7 @@
+{
+  "name": "Lodgistics",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
