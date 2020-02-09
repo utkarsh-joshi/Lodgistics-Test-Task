@@ -4,28 +4,29 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Users
+      Employees
     </ion-title>
   </ion-toolbar>
 </ion-header>
- 
+
 <ion-content>
   <ion-list lines="none" class="employee-list">
-   <ion-card class="list-item-card" *ngFor="let employeeId of employees?.ids">
-  <ion-grid class="card-grid">
-    <ion-row>
-      <ion-col class="col-app-icon" size="2">
-        <img src="{{employees.byIds[employeeId].profile_image || personImageUrl}}" class="img-person">
-      </ion-col>
-      <ion-col class="col-employee-info">
-        <ion-label class="label-employee-name">{{employees.byIds[employeeId].employee_name}}</ion-label><br />
-        <ion-label class="label-employee-age">{{employees.byIds[employeeId].employee_age}}</ion-label>
-      </ion-col>
-      <ion-col size="2">
-        <ion-icon name="options" class="icon-edit" [routerLink]="['/employee-details/', employeeId]" routerDirection="forward"></ion-icon>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-card>
+    <ion-card class="list-item-card" *ngFor="let employeeId of employees?.ids">
+      <ion-grid class="card-grid">
+        <ion-row>
+          <ion-col class="col-app-icon" size="2">
+            <img src="{{employees.byIds[employeeId].profile_image || personImageUrl}}" class="img-person">
+          </ion-col>
+          <ion-col class="col-employee-info">
+            <ion-label class="label-employee-name">{{employees.byIds[employeeId].employee_name}}</ion-label><br />
+            <ion-label class="label-employee-age">{{employees.byIds[employeeId].employee_age}}</ion-label>
+          </ion-col>
+          <ion-col size="2">
+            <ion-icon name="options" class="icon-edit" [routerLink]="['/employee-details/', employeeId]"
+              routerDirection="forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
   </ion-list>
 </ion-content>

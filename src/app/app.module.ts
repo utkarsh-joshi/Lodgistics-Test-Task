@@ -13,6 +13,7 @@ import { NetworkApiService } from './core-data/network-api.service';
 import { UserDataProviderService } from './core-data/user-data-provider.service';
 import { FormsModule } from '@angular/forms';
 import { Camera } from '@ionic-native/camera/ngx';
+import { ProgressBarService } from './core-data/progress-bar.service';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -29,6 +30,7 @@ import { Camera } from '@ionic-native/camera/ngx';
     Camera,
     UserDataProviderService,
     NetworkApiService,
+    ProgressBarService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

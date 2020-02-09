@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserDataProviderService } from '../core-data/user-data-provider.service';
+import { ProgressBarService } from '../core-data/progress-bar.service';
 
 @Component({
   selector: 'app-home',
@@ -11,18 +12,21 @@ export class HomePage {
 
   personImageUrl = "../../assets/imgs/favicon.png";
 
-  constructor(private userDataProviderCtrl: UserDataProviderService) {
+  constructor(private userDataProviderCtrl: UserDataProviderService, private progresBarService: ProgressBarService) {
 
   }
 
   async ngOnInit() {
-
-    this.employees = await this.userDataProviderCtrl.getEmployees();
-
+    try {
+      this.progresBarService.show();
+      this.employees = await this.userDataProviderCtrl.getEmployees();
+      this.progresBarService.hide();
+    } catch (error) {
+      this.progresBarService.hide();
+      console.log(error);
+    }
 
   }
-
-
 
 
 }

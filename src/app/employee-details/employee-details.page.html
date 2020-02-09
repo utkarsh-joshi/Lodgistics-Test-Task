@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>employee-details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Employee Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
     <div class="circular-image-wrapper">
-      <img  src="{{profile_image || '../../../../assets/imgs/favicon.png'}}" class="profile-pic">
+      <img src="{{profile_image || '../../../../assets/imgs/favicon.png'}}" class="profile-pic">
     </div>
     <div class="camera-icon-wrapper">
       <ion-icon name="camera" class="camera-icon" (click)="editProfilePic()"></ion-icon>
@@ -33,9 +36,9 @@
         </ion-col>
       </ion-row>
     </div>
- 
+
     <ion-button expand="block" (click)="updateEmployeeDetails()">Update</ion-button>
-    
+
   </ion-card>
 
 </ion-content>

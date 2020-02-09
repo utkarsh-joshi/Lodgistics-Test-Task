@@ -16,8 +16,6 @@ export class UserDataProviderService {
   constructor(private networkApiCtrl: NetworkApiService) { }
 
   async getEmployees() {
-
-
     if (!this.employees || this.employees.ids.length == 0) {
       try {
         let employeesArray = await this.fetchEmployees();
@@ -27,16 +25,11 @@ export class UserDataProviderService {
       } catch (error) {
         return Promise.reject(error);
       }
-
     }
-
     return Promise.resolve(this.employees);
-
-
   }
 
   private async fetchEmployees() {
-
     try {
       let response = await this.networkApiCtrl.getData();
       if (response.data && response.data.data && Array.isArray(response.data.data)) {
@@ -44,8 +37,6 @@ export class UserDataProviderService {
       } else {
         return Promise.reject("Error");
       }
-
-
     } catch (error) {
       console.log(error)
       return Promise.reject(error)
@@ -57,14 +48,11 @@ export class UserDataProviderService {
 
 
 function transformById(data: any[], key: string) {
-
   let keys: string[] = [];
   let byIds: any = {}
-
   data.forEach(element => {
     keys.push(element[key]);
     byIds[element[key]] = element;
   });
-
   return { keys, byIds }
 }
